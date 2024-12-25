@@ -1,0 +1,40 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Restaurant API Dashboard",
+    "panels": [
+      {
+        "title": "Request Duration",
+        "type": "graph",
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds_count[5m])",
+            "legendFormat": "{{route}}"
+          }
+        ]
+      },
+      {
+        "title": "Active Users",
+        "type": "gauge",
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "active_users"
+          }
+        ]
+      },
+      {
+        "title": "Orders per Hour",
+        "type": "graph",
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(orders_total[1h])"
+          }
+        ]
+      }
+    ],
+    "refresh": "5s"
+  }
+}

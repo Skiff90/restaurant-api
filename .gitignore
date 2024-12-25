@@ -1,0 +1,40 @@
+# Залежності
+node_modules/
+package-lock.json
+
+# Змінні середовища
+.env
+.env.*
+!.env.example
+
+# Логи
+logs/
+*.log
+
+# Тимчасові файли
+tmp/
+.tmp/
+
+# Завантажені файли
+uploads/
+
+# IDE та редактори
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Системні файли
+.DS_Store
+Thumbs.db
+
+# Тестові файли
+coverage/
+.nyc_output/
+
+# Збірки
+dist/
+build/
+
+# Кеш
+.cache/
